@@ -1,0 +1,15 @@
+.header {
+	width: 100%;
+	background-color: #a20d1bd9;
+}
+
+.follow_btn {
+	border: 1px solid rgba(0,123,255,.5) !important;
+}
+
+.buttn{
+	display: flex;
+}
+.buttn a {
+    height: 39px;
+}

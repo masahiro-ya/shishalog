@@ -1,0 +1,75 @@
+/*body{
+	width: 100%;
+}
+.shop{
+	width: 85%;
+	margin: 0 auto;
+}
+*/
+
+.btn-good{
+    display: inline-block;
+    padding: 0 8px;
+    cursor: pointer;
+}
+.btn-good:hover{
+    color: #f44336;
+}
+.active{
+    color: #f44336;
+}
+.btn-good .active{
+    color: #f44336;
+}
+
+.input-range {
+  display: none;
+}
+.range-group {
+  position: relative;
+}
+.range-group > a {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: 40px;
+}
+.range-group > a:before {
+  content: "★";
+  font-family: "Ionicons";
+  font-size: 40px;
+  color: #aaa;
+  cursor: pointer;
+}
+.range-group > a.on:before {
+  content: "★";
+  color: #fc3;
+  cursor: pointer;
+}
+
+.shopcomment{
+  width: 100%;
+}
+.shopcomment h2{
+  text-align: center;
+}
+.shopcomment table{
+  width: 70%;
+  margin: 0 auto;
+}
+.shopcomment table th{
+  width: 30%;
+}
+.shopcomment table td{
+  width: 70%;
+}
+.shopcomment table th p{
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+.shopcomment table td p{
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}

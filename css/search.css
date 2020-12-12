@@ -1,0 +1,35 @@
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+}
+.oya {
+	width: 33%;
+}
+.oya h2 {
+	text-align: center;
+}
+.shops {
+	height: 350px;
+	border: 1px solid #111;
+	margin: 0 auto;
+}
+.shops img {
+	width: 100%;
+	height: auto;
+}
+
+.shop {
+	width: 30%;
+	height: 350px;
+	border: 1px solid #111;
+	margin: 0 auto;
+}
+.shop p {
+	text-align: center;
+	font-size: 20px;
+}
+.shop img {
+	width: 100%;
+	height: auto;
+}
