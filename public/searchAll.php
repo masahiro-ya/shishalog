@@ -6,7 +6,7 @@
 	$conditions = filter_input(INPUT_GET, 'conditions');
 	$select = filter_input(INPUT_GET, 'select');
   if($_SERVER['REQUEST_METHOD'] === 'GET'){
-    $UserData = search::searchparams($conditions, $select);
+    $UserData = search::searchparams($conditions, $select, $_SESSION['login_user']["userId"]);
   }
 
 ?>
