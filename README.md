@@ -12,7 +12,7 @@
     作業時間：１日６時間
 
 ## ER図
-<img width="835" alt="スクリーンショット 2020-12-18 21 15 25" src="https://user-images.githubusercontent.com/59087539/102613680-4553d380-4176-11eb-90eb-f998a1f9750b.png">
+<img width="835" alt="スクリーンショット 2020-12-18 21 15 25" src="https://user-images.githubusercontent.com/59087539/102613680-4553d380-4176-11eb-90eb-f998a1f9750b.png"> 
 
 ## 機能
     ・会員登録
@@ -27,6 +27,7 @@
     ・GoogleMap APIによる場所表示
     ・お問い合わせ機能（メール送信機能あり）
     ・ランキング機能
+    ・faker(ダミーデータが自動生成されるように実装)
     
 ## 今後追加していきたい機能
     ・ユーザー同士のDM
