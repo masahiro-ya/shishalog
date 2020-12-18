@@ -22,12 +22,19 @@
 	    }
   		if($select === 'ユーザー'){
 		  	try{
-			  		if(!empty($conditions)){
-			  			$sql = "SELECT * FROM user WHERE CONCAT(name) LIKE BINARY '%".$conditions."%' AND deleteFlag = 0 AND userId != $userId";
-			  		} else{
-			  			$sql = "SELECT * FROM user WHERE deleteFlag = 0 AND userId != $userId";
-			  		}
-
+		  		  if(isset($userId)){
+				  		if(!empty($conditions)){
+				  			$sql = "SELECT * FROM user WHERE CONCAT(name) LIKE BINARY '%".$conditions."%' AND deleteFlag = 0 AND userId != $userId";
+				  		} else{
+				  			$sql = "SELECT * FROM user WHERE deleteFlag = 0 AND userId != $userId";
+				  		}
+				  	}elseif(is_null($userId)){
+				  		if(!empty($conditions)){
+				  			$sql = "SELECT * FROM user WHERE CONCAT(name) LIKE BINARY '%".$conditions."%' AND deleteFlag = 0";
+				  		} else{
+				  			$sql = "SELECT * FROM user WHERE deleteFlag = 0";
+				  		}
+				  	}
 			  		$stmt = connect()->query($sql);
 			  		$stmt->execute();
 			  		return $stmt->fetchAll();

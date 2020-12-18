@@ -76,7 +76,7 @@
 							<?php endif; ?>
 
 							<a href="detailshop.php?id=<?php echo $key['shopId'] ?>" style="font-size: 20px;"><?php echo h("{$key['shopName']}") ?></a>
-							<p>お気に入り数：<?php echo h("{$key['COUNT(s.shopId)']}") ?></p>
+							<p style="font-size: 30px;">お気に入り数：<?php echo h("{$key['COUNT(s.shopId)']}") ?></p>
 							<p>住所：<?php echo h("{$key['address']}") ?></p>
 					     </div>
 					  </div>
@@ -97,7 +97,7 @@
 							<?php endif; ?>
 
 							<a href="detailshop.php?id=<?php echo $key['shopId'] ?>" style="font-size: 20px;"><?php echo h("{$key['shopName']}") ?></a>
-							<p>評価：<?php echo h(round("{$key['AVG(r.star)']}", 2)) ?></p>
+							<p style="font-size: 30px;">評価：<?php echo h(round("{$key['AVG(r.star)']}", 2)) ?></p>
 							<p>住所：<?php echo h("{$key['address']}") ?></p>
 					    </div>
 					  </div>

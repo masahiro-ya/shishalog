@@ -52,25 +52,25 @@
 	      	<?php if(empty(h($starAvg))): ?>
 	      		<p>まだ評価されていません</p>
 	      	<?php elseif(h($starAvg) < 1): ?>
-	      	  <span style="color:#ffd700;"><i class="fas fa-star-half-alt"></i></span>
+	      	  <span style="color:#ffd700; font-size: 2rem;"><i class="fas fa-star-half-alt"></i></span>
 	      	<?php elseif(h($starAvg) < 1.5): ?>
-	      		<span style="color:#ffd700;"><i class="fas fa-star"></i></span>
+	      		<span style="color:#ffd700; font-size: 2rem;"><i class="fas fa-star"></i></span>
 	      	<?php elseif(h($starAvg) < 2): ?>
-	      	  <span style="color:#ffd700;"><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+	      	  <span style="color:#ffd700; font-size: 2rem;"><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
 	      	<?php elseif(h($starAvg) < 2.5): ?>
-	      	  <span style="color:#ffd700;"><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+	      	  <span style="color:#ffd700; font-size: 2rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
 	      	<?php elseif(h($starAvg) < 3): ?>
-	      	  <span style="color:#ffd700;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+	      	  <span style="color:#ffd700; font-size: 2rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
 	      	<?php elseif(h($starAvg) < 3.5): ?>
-	      	  <span style="color:#ffd700;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+	      	  <span style="color:#ffd700; font-size: 2rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
           <?php elseif(h($starAvg) < 4): ?>
-            <span style="color:#ffd700;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+            <span style="color:#ffd700; font-size: 2rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
           <?php elseif(h($starAvg) < 4.5): ?>
-            <span style="color:#ffd700;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+            <span style="color:#ffd700; font-size: 2rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
           <?php elseif(h($starAvg) < 5): ?>
-            <span style="color:#ffd700;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+            <span style="color:#ffd700; font-size: 2rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
           <?php elseif(h($starAvg) == 5): ?>
-            <span style="color:#ffd700;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+            <span style="color:#ffd700; font-size: 2rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
 	      	<?php endif ?>
           <h2 id="avg"><?php echo h($starAvg); ?></h2>
 	      </div>
