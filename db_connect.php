@@ -9,10 +9,6 @@ function connect()
 
    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
    $dotenv->load(); //.envが無いとエラーになる
-	// $host = $_ENV["DB_HOST"];
-	// $db   = $_ENV["DB_NAME"];
-	// $user = $_ENV["DB_USER"];
-	// $pass = $_ENV["DB_PASS"];
 	$host = $_ENV["DB_HOST"];
 	$db   = $_ENV["DB_NAME"];
 	$user = $_ENV["DB_USER"];
@@ -26,7 +22,7 @@ function connect()
 		]);
 		return $pdo;
 	} catch(PDOException $e) {
-		echo '接続失敗です！'. $e->getMessage();
+		echo '接続失敗です!'. $e->getMessage();
 		exit();
 	}
 }

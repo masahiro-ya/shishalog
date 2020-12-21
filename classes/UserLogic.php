@@ -1,5 +1,6 @@
 <?php
   require_once '../db_connect.php';
+  require_once '../vendor/autoload.php';
 
   class UserLogic
   {
@@ -26,6 +27,7 @@
        	$stmt->execute($arr);
         $user = $conn->lastInsertId();
         $user = self::usersearch($user);
+        self::fakeuser();
         return $user;
 
        } catch(\Exception $e){
@@ -41,6 +43,68 @@
          return $stmt->fetch();
       }catch (\Exception $e){
         exit("Can't insert ERROR!".$e -> getMessage());
+      }
+    }
+
+    public static function fakeuser(){
+      $faker = Faker\Factory::create('ja_JP');
+        for ($i = 0; $i < 10; $i++) {
+          $shopName = $faker->company;
+          $address = mb_substr($faker->address, 9);
+          $openDate = $faker->date;
+          $openTime = $faker->time;
+          $closeTime = $faker->time;
+          $sql =
+            "INSERT INTO shop (
+              shopName,
+              address,
+              openDate,
+              openTime,
+              closeTime
+              )
+            VALUES (
+              :shopName,
+              :address,
+              :openDate,
+              :openTime,
+              :closeTime
+            )";
+          $stmt = connect()->prepare($sql);
+          $stmt->bindValue(':shopName', $shopName);
+          $stmt->bindValue(':address', $address);
+          $stmt->bindValue(':openDate', $openDate);
+          $stmt->bindValue(':openTime', $openTime);
+          $stmt->bindValue(':closeTime', $closeTime);
+          $stmt->execute();
+        }
+      for ($i = 0; $i < 10; $i++) {
+          $password = $faker->password;
+          $name = $faker->name;
+          $email = $faker->email;
+          $birth = $faker->dateTimeBetween('-80 years', '-20years')->format('Y-m-d');
+          $token = $faker->realText(20);
+          $sql =
+            "INSERT INTO user (
+              password,
+              name,
+              email,
+              birth,
+              token
+              )
+            VALUES (
+              :password,
+              :name,
+              :email,
+              :birth,
+              :token
+            )";
+          $stmt = connect()->prepare($sql);
+          $stmt->bindValue(':password', $password);
+          $stmt->bindValue(':name', $name);
+          $stmt->bindValue(':email', $email);
+          $stmt->bindValue(':birth', $birth);
+          $stmt->bindValue(':token', $token);
+          $stmt->execute();
       }
     }
 
